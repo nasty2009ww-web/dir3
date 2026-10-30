@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dir3 (درع) | الموقع الرسمي لتطبيق حجب الإعلانات وحماية الخصوصية للأندرويد</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="درع (Dir3) - تطبيق أندرويد متطور لحجب الإعلانات على مستوى النظام، إيقاف المتعقبات، وصد روابط الاحتيال محلياً دون إرسال بياناتك لخوادم خارجية. تصفح بلا إعلانات، ولا متعقبين ولا احتيال.">
+  <meta name="keywords" content="درع, Dir3, حجب الإعلانات, مانع إعلانات أندرويد, adblock android, حماية الخصوصية, حظر المتعقبات, VPN محلي, أمان الهاتف, No Root Adblocker">
+  <meta name="author" content="Dir3 Security Team">
+  <meta name="theme-color" content="#050506">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dir3 (درع) - تصفّح بحرية. بدون إعلانات.">
+  <meta property="og:description" content="تطبيق أندرويد متطور لحجب الإعلانات والمتعقبات والاحتيال مباشرة من جهازك عبر تقنية VPN المحلية.">
+  <meta property="og:image" content="assets/images/hero-mockup.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dir3 (درع) | حماية الخصوصية وحجب الإعلانات للأندرويد">
+  <meta name="twitter:description" content="تصفح بلا إعلانات، ولا متعقبين ولا احتيال. احصل على ملف APK الرسمي.">
+  <meta name="twitter:image" content="assets/images/hero-mockup.png">
+
+  <!-- Google Fonts: Cairo for sleek modern Arabic & Plus Jakarta Sans for numbers/brand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Structured Data (JSON-LD) for SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dir3 (درع)",
+    "operatingSystem": "Android 8.0+",
+    "applicationCategory": "SecurityApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "نظام حماية خصوصية وحجب إعلانات شامل على مستوى نظام أندرويد باستخدام فلترة محلية عبر الجهاز دون خوادم طرف ثالث.",
+    "softwareVersion": "1.4.2"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Cyber Matrix Grid Background -->
+  <div class="cyber-grid-bg" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       1. Navigation Header
+       ========================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="الصفحة الرئيسية لتطبيق درع">
+        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <span>.Dir3</span>
+        <span class="brand-arabic-badge">درع</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="القائمة الرئيسية">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+          <li><a href="#features" class="nav-link">المميزات</a></li>
+          <li><a href="#how-it-works" class="nav-link">كيف يعمل؟</a></li>
+          <li><a href="#privacy" class="nav-link">الخصوصية والأمان</a></li>
+          <li><a href="#faq" class="nav-link">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Mobile Menu Button -->
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary btn-sm shimmer-btn action-download-apk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>تحميل APK</span>
+        </a>
+
+        <button class="mobile-toggle" aria-label="فتح القائمة" aria-expanded="false" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="hero-glow-sphere" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-content reveal">
+          
+          <!-- Smart Security Badge -->
+          <div class="hero-badge-wrap">
+            <div class="badge-pill">
+              <span class="pulse-dot"></span>
+              <span>حماية ذكية لهاتفك • بدون روت</span>
+            </div>
+          </div>
+
+          <!-- Main Headlines -->
+          <h1 class="hero-title">
+            تصفّح بحرية.<br>
+            <span class="text-neon">بدون إعلانات.</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-subtitle">
+            درع يحمي خصوصيتك ويحجب الإعلانات والمتعقبات والاحتيالات مباشرة من جهازك. تصفح بلا إعلانات، ولا متعقبين ولا احتيال.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#download" class="btn btn-primary btn-lg shimmer-btn action-download-apk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>تحميل Dir3 مجاناً</span>
+            </a>
+
+            <a href="#features" class="btn btn-secondary btn-lg">
+              <span>استكشف المميزات</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Android Compatibility Meta -->
+          <div class="hero-android-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+              Android APK
+            </span>
+            <span class="separator"></span>
+            <span>تحميل مباشر وآمن</span>
+            <span class="separator"></span>
+            <span data-config="file-size">18.4 ميجابايت</span>
+          </div>
+
+        </div>
+
+        <!-- Realistic Smartphone Mockup Showcase -->
+        <div class="hero-mockup-showcase reveal delay-1">
+          <div class="mockup-ambient-glow" aria-hidden="true"></div>
+
+          <!-- Floating Cyber Metric Badges -->
+          <div class="floating-badge badge-right" aria-hidden="true">
+            <div class="badge-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="badge-text-box">
+              <h5>فلترة محلية 100%</h5>
+              <p>بدون إرسال طلباتك للسحابة</p>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-left" aria-hidden="true">
+            <div class="badge-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+              </svg>
+            </div>
+            <div class="badge-text-box">
+              <h5>صفر إعلانات</h5>
+              <p>داخل التطبيقات والمتصفح</p>
+            </div>
+          </div>
+
+          <!-- Interactive Simulator Mockup -->
+          <div id="simMockupWrapper">
+            <div class="phone-mockup-card">
+              <div class="phone-screen">
+                
+                <!-- Status Bar -->
+                <div class="phone-status-bar">
+                  <span>9:41</span>
+                  <div class="status-icons">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                  </div>
+                </div>
+
+                <!-- App Header -->
+                <div class="app-header">
+                  <div class="app-brand">
+                    <svg class="shield-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <span>Dir3 Shield</span>
+                  </div>
+                  <div class="app-status-badge" id="mockupStatusBadge">
+                    <span class="mini-dot"></span>
+                    الحماية نشطة
+                  </div>
+                </div>
+
+                <!-- Main AdBlock Switch Card -->
+                <div class="app-card-main">
+                  <div class="app-card-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" width="18" height="18">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>حجب الإعلانات الشامل</span>
+                  </div>
+                  <p class="app-card-desc">
+                    أنت تتصفح بأمان فائق الآن. يتم فحص كل طلب محلياً وحجب الإعلانات والمتعقبات فوراً.
+                  </p>
+                  <div class="app-main-toggle-wrap">
+                    <span class="app-toggle-state-text" id="mockupToggleText">مفعّل بالكامل</span>
+                    <label class="mockup-switch" aria-label="تفعيل أو إيقاف الحماية الرئيسية">
+                      <input type="checkbox" id="mockupMainToggle" checked>
+                      <span class="switch-slider"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Card 2: Trackers -->
+                <div class="app-card-lime">
+                  <div class="card-info-flex">
+                    <div class="card-info-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                    </div>
+                    <div class="card-info-text">
+                      <h4>إيقاف المتعقبات والملفات الخفية</h4>
+                      <p>منع فيسبوك وجوجل من مراقبة نشاطك</p>
+                    </div>
+                  </div>
+                  <label class="mockup-switch" aria-label="تفعيل أو إيقاف حظر المتعقبات">
+                    <input type="checkbox" id="mockupTrackerToggle" checked>
+                    <span class="switch-slider"></span>
+                  </label>
+                </div>
+
+                <!-- Card 3: Scam & Phishing -->
+                <div class="app-card-lime-soft">
+                  <div class="card-info-flex">
+                    <div class="card-info-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                      </svg>
+                    </div>
+                    <div class="card-info-text">
+                      <h4>درع التصيد والاحتيال</h4>
+                      <p>اعتراض فوري للروابط المزيفة</p>
+                    </div>
+                  </div>
+                  <label class="mockup-switch" aria-label="تفعيل أو إيقاف حماية التصيد">
+                    <input type="checkbox" id="mockupScamToggle" checked>
+                    <span class="switch-slider"></span>
+                  </label>
+                </div>
+
+                <!-- Card 4: Security Level -->
+                <div class="app-security-level">
+                  <div>
+                    <h5 style="font-size:0.85rem; font-weight:700;">مستوى الأمان</h5>
+                    <p style="font-size:0.7rem; color:#9CA3AF;">جدار حماية DNS محلي مشفر</p>
+                  </div>
+                  <div class="security-level-dots">
+                    <span class="sec-dot"></span>
+                    <span class="sec-dot"></span>
+                    <span class="sec-dot"></span>
+                  </div>
+                </div>
+
+                <!-- Live Counter Strip -->
+                <div class="phone-live-stats">
+                  <div class="live-stat-item">
+                    <div class="live-stat-val" id="liveAdsCount">1,420</div>
+                    <div class="live-stat-lbl">إعلان محجوب بالجلسة</div>
+                  </div>
+                  <div class="live-stat-item">
+                    <div class="live-stat-val">0.0 ms</div>
+                    <div class="live-stat-lbl">تأخير الفلترة (محلي)</div>
+                  </div>
+                  <div class="live-stat-item">
+                    <div class="live-stat-val">100%</div>
+                    <div class="live-stat-lbl">خصوصية تامة</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Realistic Mockup Image View (Fallback/Switchable) -->
+          <div id="realMockupWrapper" style="display:none;">
+            <div class="phone-mockup-card" style="padding:0; overflow:hidden;">
+              <img src="assets/images/hero-mockup.png" alt="واجهة تطبيق Dir3 درع على هاتف أندرويد" style="width:100%; height:auto; display:block;">
+            </div>
+          </div>
+
+          <!-- Mockup View Toggle Bar -->
+          <div class="mockup-toggle-bar">
+            <button class="mockup-toggle-btn active" id="btnSimView">الواجهة التفاعلية الحية</button>
+            <button class="mockup-toggle-btn" id="btnRealView">عرض الهاتف الحقيقي</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. Statistics Section
+         ========================================================================== -->
+    <section class="stats-section" id="statistics">
+      <div class="container">
+        
+        <div class="stats-grid reveal">
+          
+          <!-- Stat 1: Ads Blocked -->
+          <div class="stat-card">
+            <div class="stat-number" data-target="18450000" data-suffix="+" data-stat="ads">18.4M+</div>
+            <div class="stat-label">إعلان تم حجبه</div>
+            <div class="stat-sublabel">في التطبيقات والمتصفحات والألعاب</div>
+          </div>
+
+          <!-- Stat 2: Trackers Blocked -->
+          <div class="stat-card">
+            <div class="stat-number" data-target="9230000" data-suffix="+" data-stat="trackers">9.2M+</div>
+            <div class="stat-label">متعقب تم إيقافه</div>
+            <div class="stat-sublabel">حماية تامة من بناء الملفات السلوكية</div>
+          </div>
+
+          <!-- Stat 3: Scams Blocked -->
+          <div class="stat-card">
+            <div class="stat-number" data-target="340000" data-suffix="+" data-stat="scams">340K+</div>
+            <div class="stat-label">رابط احتيالي تم إحباطه</div>
+            <div class="stat-sublabel">فحص فوري لعناوين التصيد المشبوهة</div>
+          </div>
+
+          <!-- Stat 4: Battery & Data Saved -->
+          <div class="stat-card">
+            <div class="stat-number" data-target="28" data-suffix="%" data-stat="battery">28%</div>
+            <div class="stat-label">توفير في البطارية والبيانات</div>
+            <div class="stat-sublabel">عبر منع تنزيل وسائط الإعلانات الثقيلة</div>
+          </div>
+
+        </div>
+
+        <!-- Clearly Identified Demonstration Notice -->
+        <div class="stats-disclaimer reveal delay-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span>
+            <strong>بيانات تجريبية توضيحية:</strong> تمثل هذه الأرقام اختبارات الأداء المسبقة لفلترة درع وتوضح كفاءة القوائم قبل إطلاق تقرير الشفافية العام. قابلة للتعديل بسهولة عبر ملف الإعدادات.
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. Features Section
+         ========================================================================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">مميزات لا تضاهى</span>
+          <h2 class="section-title">حماية متكاملة تبدأ من أول ثانية</h2>
+          <p class="section-subtitle">
+            صُمم درع (Dir3) ليكون درعك السيبراني الخفيف والصلب، معتمداً على أحدث تقنيات تصفية الحزم على مستوى نظام الأندرويد.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <!-- Feature 1: System-wide Ad Blocking -->
+          <div class="feature-card reveal">
+            <div class="feature-glow"></div>
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+                <line x1="2" y1="8" x2="22" y2="8"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">حجب شامل للإعلانات (System-wide)</h3>
+            <p class="feature-desc">
+              لا يقتصر الحجب على المتصفح فقط؛ بل يمتد ليشمل الإعلانات المنبثقة، إعلانات الفيديو الإجبارية، ولافتات التطبيقات والألعاب المفضلة لديك.
+            </p>
+            <div class="feature-meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>يعمل على كافة تطبيقات النظام</span>
+            </div>
+          </div>
+
+          <!-- Feature 2: Tracker Protection -->
+          <div class="feature-card reveal delay-1">
+            <div class="feature-glow"></div>
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <circle cx="12" cy="11" r="3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">إيقاف المتعقبات الرقمية (Tracker Protection)</h3>
+            <p class="feature-desc">
+              يقطع شريان البيانات التجسسية للشركات الإعلانية وشبكات التحليلات التي تبني ملفاً شخصياً عن اهتماماتك ومواقعك وسلوكك اليومي.
+            </p>
+            <div class="feature-meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>حظر فوري لملفات تعريف الارتباط</span>
+            </div>
+          </div>
+
+          <!-- Feature 3: Scam & Fraud Protection -->
+          <div class="feature-card reveal delay-2">
+            <div class="feature-glow"></div>
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">درع التصيد والاحتيال (Anti-Scam)</h3>
+            <p class="feature-desc">
+              قاعدة بيانات أمنية محدثة باستمرار تفحص عناوين النطاقات المشبوهة وتحميك من رسائل الاحتيال، صفحات البنوك المزيفة، ومحاولات سرقة كلمات المرور.
+            </p>
+            <div class="feature-meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>تحديثات مستمرة لقوائم التهديدات</span>
+            </div>
+          </div>
+
+          <!-- Feature 4: Local VPN Filtering -->
+          <div class="feature-card reveal">
+            <div class="feature-glow"></div>
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">فلترة VPN محلية (On-Device Filtering)</h3>
+            <p class="feature-desc">
+              يستخدم واجهة أندرويد الرسمية (VpnService) لإنشاء حلقة محلية (Loopback) مغلقة داخل الهاتف فقط. لا تخرج أي حزمة بيانات إلى خادم وسيط.
+            </p>
+            <div class="feature-meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>سرعة اتصال فائقة دون إبطاء</span>
+            </div>
+          </div>
+
+          <!-- Feature 5: Privacy Protection -->
+          <div class="feature-card reveal delay-1">
+            <div class="feature-glow"></div>
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">حماية الخصوصية المطلقة (Zero-Log)</h3>
+            <p class="feature-desc">
+              لا نقوم بحفظ أي سجل لتاريخ تصفحك، ولا نسجل عناوين IP، ولا نحلل طلبات DNS الخاصة بك. هاتفك ملكك وحدك ولا نطلع على محتواه إطلاقاً.
+            </p>
+            <div class="feature-meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>خصوصية معمّاة بالتصميم</span>
+            </div>
+          </div>
+
+          <!-- Feature 6: No Analytics or Tracking -->
+          <div class="feature-card reveal delay-2">
+            <div class="feature-glow"></div>
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">بدون تحليلات أو إعلانات داخل التطبيق</h3>
+            <p class="feature-desc">
+              تطبيق درع خالٍ تماماً من أي مكتبات إعلانات أو أدوات تحليلات تجارية مثل Google Analytics أو Firebase Tracking. كود نقي خفيف وسريع.
+            </p>
+            <div class="feature-meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>100% شفاف وخالٍ من الأكواد الخفية</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. How It Works Section
+         ========================================================================== -->
+    <section class="how-section" id="how-it-works">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">بساطة لا تضاهى</span>
+          <h2 class="section-title">كيف يحميك درع في 3 خطوات بسيطة؟</h2>
+          <p class="section-subtitle">
+            لا يتطلب صلاحيات روت (No Root) ولا يتطلب إعدادات معقدة. التفعيل يتم بنقرة زر واحدة خلال أقل من دقيقة.
+          </p>
+        </div>
+
+        <div class="steps-timeline">
+          
+          <!-- Step 1 -->
+          <div class="step-card reveal">
+            <div class="step-number-badge">01</div>
+            <h3 class="step-title">تثبيت درع (Install Dir3)</h3>
+            <p class="step-desc">
+              قم بتحميل ملف APK الرسمي مباشرة من موقعنا وقم بتثبيته على هاتفك الأندرويد في ثوانٍ معدودة.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card reveal delay-1">
+            <div class="step-number-badge">02</div>
+            <h3 class="step-title">تفعيل الحماية المحلية (Local VPN)</h3>
+            <p class="step-desc">
+              افتح التطبيق واضغط على زر التفعيل ليقوم بإنشاء اتصال Loopback محلي آمن داخل نظام الهاتف دون الاتصال بأي خادم خارجي.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card reveal delay-2">
+            <div class="step-number-badge">03</div>
+            <h3 class="step-title">تصفح بفلترة DNS مشفرة</h3>
+            <p class="step-desc">
+              استمتع بتصفح فوري ونظيف، حيث يتم إسقاط جميع طلبات الإعلانات والمتعقبات محلياً وفورياً قبل أن تستهلك باقتك.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. Privacy & Security Section
+         ========================================================================== -->
+    <section class="privacy-section" id="privacy">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">معايير الأمان المتقدمة</span>
+          <h2 class="section-title">لماذا يختلف درع عن أي تطبيق VPN آخر؟</h2>
+          <p class="section-subtitle">
+            معظم تطبيقات الـ VPN ترسل ترافيك هاتفك بالكامل إلى خوادم خارجية قد تسجل بياناتك. درع يعمل بطريقة مغايرة تماماً تضع خصوصيتك في المقام الأول.
+          </p>
+        </div>
+
+        <!-- Architecture Comparison Box -->
+        <div class="privacy-comparison-box reveal">
+          <div class="comparison-grid">
+            
+            <!-- Standard VPN -->
+            <div class="comparison-column standard-vpn">
+              <div class="col-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+                <h3>تطبيقات الـ VPN والبروكسي التقليدية</h3>
+                <span class="col-badge">مخاطر خصوصية</span>
+              </div>
+              <ul class="comparison-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  <span>توجه كامل حزم الإنترنت إلى خوادم وسيطة خارج جهازك.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  <span>قد تتعرض بيانات التصفح للتسجيل (Logging) أو البيع لأطراف تجارية.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  <span>تزيد من زمن التأخير (Latency) وتخفض سرعة اتصالك بالإنترنت.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                  <span>تتطلب اشتراكات شهرية متكررة أو تعرض إعلانات مزعجة داخل التطبيق.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Dir3 Local Architecture -->
+            <div class="comparison-column dir3-local">
+              <div class="col-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <h3 class="text-neon">تطبيق درع (Dir3 On-Device Loopback)</h3>
+                <span class="col-badge">المعيار الذهبي للأمان</span>
+              </div>
+              <ul class="comparison-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>الفلترة تتم محلياً بالكامل على هاتفك دون استدعاء أي خادم وسيط.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>صفر تسجيل: لا يمكن لأحد (حتى فريق درع) معرفة المواقع التي تزورها.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>سرعة أصلية كاملة وبدون أي تأخير لأن الإعلانات تحجب قبل خروجها.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>خالٍ تماماً من الإعلانات ومن التحليلات التجسسية 100%.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Privacy Pillars Grid -->
+        <div class="privacy-pillars">
+          
+          <div class="pillar-card reveal">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </div>
+            <h4>تصفية محلية 100%</h4>
+            <p>يتم إسقاط النطاقات الخبيثة والإعلانية بواسطة جدار الحماية الداخلي المدمج بدون استخدام خوادم بروكسي خارجية.</p>
+          </div>
+
+          <div class="pillar-card reveal delay-1">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h4>انعدام التحليلات (No Analytics)</h4>
+            <p>لا نزرع أي كود تتبعي في حزمة الـ APK. لا نجمع رقم الهاتف، معرّف الجهاز (IMEI)، ولا حتى إحصاءات الأعطال دون إذنك.</p>
+          </div>
+
+          <div class="pillar-card reveal delay-2">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <h4>تطبيق نظيف وخالٍ من الإعلانات</h4>
+            <p>هدفنا الأساسي هو مكافحة الإعلانات، لذلك من المستحيل أن تجد إعلاناً واحداً داخل تطبيق درع نفسه.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. Download Section
+         ========================================================================== -->
+    <section class="download-section" id="download">
+      <div class="container">
+        
+        <div class="download-box reveal">
+          <div class="download-box-glow" aria-hidden="true"></div>
+
+          <div class="download-grid">
+            
+            <!-- Left CTA Column -->
+            <div class="download-cta-col">
+              <span class="section-tag">الإصدار الرسمي</span>
+              <h2>جاهز تتصفح بدون إعلانات؟</h2>
+              <p>
+                حمّل درع الآن وابدأ تجربة تصفح أكثر خصوصية، أماناً وسرعة على هاتفك الأندرويد. تثبيت مباشر بنقرة واحدة.
+              </p>
+
+              <div class="download-actions-cluster">
+                <a href="https://github.com/dir3-shield/dir3-android/releases/download/v1.4.2/Dir3-v1.4.2-release.apk" class="btn btn-primary btn-lg shimmer-btn action-download-apk" id="mainDownloadApkBtn" download>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  <span>تحميل ملف APK المباشر</span>
+                </a>
+
+                <button type="button" class="btn btn-secondary" data-open-modal="modal-install-guide">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                  </svg>
+                  <span>طريقة التثبيت السريع</span>
+                </button>
+              </div>
+
+              <div class="download-notes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>ملف آمن 100% ومفحوص ضد البرمجيات الخبيثة • بدون روت</span>
+              </div>
+            </div>
+
+            <!-- Right Specs Column -->
+            <div class="download-specs-col">
+              <div class="apk-specs-card">
+                <div class="specs-title">
+                  <span>مواصفات الحزمة الرسمية</span>
+                  <span class="specs-verified-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><polyline points="20 6 9 17 4 12"/></svg>
+                    نسخة موثقة
+                  </span>
+                </div>
+
+                <table class="specs-table">
+                  <tbody>
+                    <tr>
+                      <td class="spec-name">إصدار التطبيق</td>
+                      <td class="spec-val" data-config="app-version">v1.4.2</td>
+                    </tr>
+                    <tr>
+                      <td class="spec-name">حجم الملف</td>
+                      <td class="spec-val" data-config="file-size">18.4 ميجابايت</td>
+                    </tr>
+                    <tr>
+                      <td class="spec-name">الحد الأدنى للنظام</td>
+                      <td class="spec-val" data-config="min-android">Android 8.0 (Oreo)+</td>
+                    </tr>
+                    <tr>
+                      <td class="spec-name">تاريخ التحديث</td>
+                      <td class="spec-val" data-config="release-date">25 أكتوبر 2026</td>
+                    </tr>
+                    <tr>
+                      <td class="spec-name">المعمارية المدعومة</td>
+                      <td class="spec-val" data-config="target-arch">arm64-v8a, v7a</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- Checksum SHA-256 Box -->
+                <div class="checksum-box">
+                  <div class="checksum-header">
+                    <span>بصمة التحقق الرقمية (SHA-256):</span>
+                    <button type="button" class="btn-copy-checksum" id="btnCopyChecksum" aria-label="نسخ بصمة التشفير">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                      <span>نسخ الرمز</span>
+                    </button>
+                  </div>
+                  <code class="checksum-code" data-config="sha256">b79d86c4f31835e982187e81b6194b159f8c67a3363065d642b58d9e685f0962</code>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. FAQ Section
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">مركز المساعدة</span>
+          <h2 class="section-title">الأسئلة الشائعة</h2>
+          <p class="section-subtitle">
+            إجابات واضحة وشفافة لكل ما تحتاج معرفته عن طريقة عمل درع وأمانه على هاتفك.
+          </p>
+        </div>
+
+        <!-- FAQ Search Filter -->
+        <div class="faq-search-box reveal">
+          <input type="text" class="faq-search-input" id="faqSearchInput" placeholder="ابحث في الأسئلة الشائعة (مثلاً: مجاني، VPN، صلاحيات)..." aria-label="ابحث في الأسئلة الشائعة">
+          <svg class="faq-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+
+        <!-- FAQ Accordion List -->
+        <div class="faq-accordion-list reveal delay-1">
+          
+          <!-- Q1 -->
+          <div class="faq-item active">
+            <button class="faq-trigger" aria-expanded="true">
+              <span>هل تطبيق درع (Dir3) مجاني؟</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                نعم، درع مجاني 100% لجميع المستخدمين. التطبيق مبني بروح المصدر المفتوح وحرية الخصوصية على الإنترنت، ولا يحتوي على رسوم خفية أو باقات مدفوعة تعطل الميزات الأساسية.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>كيف يعمل تطبيق درع؟</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                يعمل درع كمرشح DNS محلي ذكي (Local DNS Sinkhole). يقوم بفحص كل طلب اتصال صادر من هاتفك، وفي حال كان الطلب موجهاً إلى خادم إعلانات معروف، متعقب، أو صفحة احتيال، يقوم التطبيق بإسقاط الطلب محلياً فوراً مما يمنع تحميل الإعلان ويوفر بياناتك وبطاريتك.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>هل يحتاج صلاحيات VPN؟ ولماذا؟</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                نعم، يطلب نظام أندرويد الإذن لاستخدام ميزة (Android VpnService)، ولكن على عكس خدمات VPN التجارية، لا يقوم درع بتوصيلك بخادم بعيد أو تحويل بياناتك عبر الإنترنت. إنما يستخدم بروتوكول VPN لإنشاء حلقة محلية (Loopback Interface) داخل معالج الهاتف فقط لفحص طلبات النطاقات وتصفيتها.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>هل يجمع درع أي بيانات عني أو عن تصفحي؟</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                قطعياً لا! خصوصيتك خط أحمر. لا نمتلك خوادم تجمع بيانات التصفح، ولا يحتوي التطبيق على أي مكتبات تتبع أو معرّفات إعلانية، ولا نسجل المواقع التي تزورها. كل المعالجة تبدأ وتنتهي في ذاكرة هاتفك.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>كيف أثبت تطبيق درع على جهازي؟</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                ببساطة قم بتحميل ملف APK من زر التحميل في هذا الموقع، ثم افتح الملف عند اكتمال تنزيله. إذا طلب منك النظام تفعيل "تثبيت التطبيقات من مصادر غير معروفة" لمتصفحك، قم بالموافقة عليها، واضغط "تثبيت". ثم افتح درع واضغط زر التفعيل الكبير.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>هل يعمل على جميع هواتف Android؟</span>
+              <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                نعم، يدعم درع جميع هواتف وأجهزة الأندرويد اللوحية وأجهزة Android TV التي تعمل بنظام Android 8.0 (Oreo) وصولاً إلى أحدث إصدارات Android 14 و Android 15، دون الحاجة لأي صلاحيات روت (No Root Required).
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       9. Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="#home" class="brand-logo" aria-label="شعار درع">
+            <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <span>.Dir3</span>
+          </a>
+          <p>
+            درع (Dir3) هو تطبيق أندرويد متقدم لحجب الإعلانات الشامل وحماية الخصوصية الرقمية محلياً. تصفح بلا إعلانات، ولا متعقبين ولا احتيال.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://github.com/dir3-shield/dir3-android" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://t.me/dir3_app" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Telegram Channel">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.943z"/>
+              </svg>
+            </a>
+            <a href="mailto:support@dir3.app" class="social-btn" aria-label="Contact Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Col 1 -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">التنقل السريع</h4>
+          <ul class="footer-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#features">المميزات والخصائص</a></li>
+            <li><a href="#how-it-works">كيف يعمل؟</a></li>
+            <li><a href="#privacy">الأمان والخصوصية</a></li>
+            <li><a href="#download">تحميل ملف APK</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Col 2 -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">الوثائق والسياسات</h4>
+          <ul class="footer-links">
+            <li><a href="#" data-open-modal="modal-privacy-policy">سياسة الخصوصية</a></li>
+            <li><a href="#" data-open-modal="modal-terms">شروط الاستخدام</a></li>
+            <li><a href="#" data-open-modal="modal-install-guide">دليل التثبيت اليدوي</a></li>
+            <li><a href="https://github.com/dir3-shield/dir3-android" target="_blank" rel="noopener noreferrer">الكود المصدري (GitHub)</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Col 3 -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">الدعم والأمان</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:support@dir3.app">support@dir3.app</a></li>
+            <li><a href="mailto:security@dir3.app">الإبلاغ عن ثغرة أمنية</a></li>
+            <li><a href="https://t.me/dir3_app" target="_blank" rel="noopener noreferrer">قناة مجتمع تيليجرام</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Dir3 (درع). جميع الحقوق محفوظة. تطبيق مستقل لحماية الخصوصية.
+        </div>
+        <div>
+          تم التطوير بأعلى معايير الأمن السيبراني • الإصدار <span data-config="app-version">v1.4.2</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Modals: Install Guide, Privacy Policy, Terms of Use
+       ========================================================================== -->
+
+  <!-- Modal 1: Installation Guide -->
+  <div class="modal-overlay" id="modal-install-guide" role="dialog" aria-modal="true" aria-labelledby="modalInstallTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" data-close-modal aria-label="إغلاق">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="modal-header">
+        <h3 id="modalInstallTitle">دليل تثبيت Dir3 على أجهزة أندرويد</h3>
+        <p>خطوات سهلة لتثبيت ملف الـ APK المباشر وتفعيل الحماية دون أي تعقيد.</p>
+      </div>
+
+      <div class="modal-steps-list">
+        <div class="modal-step-item">
+          <div class="modal-step-num">1</div>
+          <div class="modal-step-body">
+            <h4>تحميل ملف APK</h4>
+            <p>انقر على زر "تحميل ملف APK المباشر" في الموقع. قد يظهر تنبيه من متصفحك يطلب تأكيد التحميل، اضغط "تنزيل على أي حال".</p>
+          </div>
+        </div>
+
+        <div class="modal-step-item">
+          <div class="modal-step-num">2</div>
+          <div class="modal-step-body">
+            <h4>السماح بالتثبيت من مصادر غير معروفة</h4>
+            <p>عند فتح الملف المحمل، إذا طلب منك النظام إذناً، توجه إلى الإعدادات وقم بتفعيل خيار "السماح من هذا المصدر" للمتصفح أو مدير الملفات.</p>
+          </div>
+        </div>
+
+        <div class="modal-step-item">
+          <div class="modal-step-num">3</div>
+          <div class="modal-step-body">
+            <h4>تثبيت التطبيق وتشغيله</h4>
+            <p>اضغط "تثبيت". بعد انتهاء التثبيت افتح تطبيق Dir3 واضغط على المفتاح الرئيسي لتفعيل الفلترة المحلية.</p>
+          </div>
+        </div>
+
+        <div class="modal-step-item">
+          <div class="modal-step-num">4</div>
+          <div class="modal-step-body">
+            <h4>الموافقة على اتصال الـ VPN المحلي</h4>
+            <p>سيظهر طلب نظام أندرويد لإنشاء اتصال VPN، اضغط "موافق". هذا الاتصال محلي 100% داخل جهازك ولا يرسل بياناتك لأي مكان.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="https://github.com/dir3-shield/dir3-android/releases/download/v1.4.2/Dir3-v1.4.2-release.apk" class="btn btn-primary shimmer-btn action-download-apk" download>
+          تحميل الـ APK الآن
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Privacy Policy -->
+  <div class="modal-overlay" id="modal-privacy-policy" role="dialog" aria-modal="true" aria-labelledby="modalPrivacyTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" data-close-modal aria-label="إغلاق">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="modal-header">
+        <h3 id="modalPrivacyTitle">سياسة الخصوصية (Privacy Policy)</h3>
+        <p>آخر تحديث: أكتوبر 2026</p>
+      </div>
+
+      <div style="color:var(--color-text-secondary); font-size:0.95rem; line-height:1.8; display:flex; flex-direction:column; gap:1rem;">
+        <p>
+          في <strong>Dir3 (درع)</strong>، نحرص على تقديم أعلى مستويات حماية الخصوصية. بنيتنا التحتية قائمة على مبدأ <em>"الخصوصية بالتصميم" (Privacy by Design)</em>.
+        </p>
+        <h4 style="color:#FFF;">1. عدم جمع البيانات الشخصية</h4>
+        <p>لا نقوم بجمع أو تخزين أو بيع أي بيانات شخصية تخصك، بما في ذلك هويتك، سجل تصفحك، موقعك الجغرافي أو طلبات DNS التي يجريها هاتفك.</p>
+
+        <h4 style="color:#FFF;">2. فلترة محلية بدون خوادم مراقبة</h4>
+        <p>خدمة الـ VPN المدمجة هي خدمة داخلية موجهة إلى حلقة الجهاز (Loopback). لا تمر بياناتك عبر أي خوادم خارجية تابعة لدرع أو لأي طرف ثالث.</p>
+
+        <h4 style="color:#FFF;">3. انعدام الإعلانات والتحليلات</h4>
+        <p>تطبيق درع خالٍ 100% من حزم تطوير البرمجيات الإعلانية (Ad SDKs) وأدوات التحليلات التتبعية.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Terms of Use -->
+  <div class="modal-overlay" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="modalTermsTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" data-close-modal aria-label="إغلاق">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="modal-header">
+        <h3 id="modalTermsTitle">شروط الاستخدام (Terms of Use)</h3>
+        <p>شروط وأحكام استخدام تطبيق وموقع Dir3</p>
+      </div>
+
+      <div style="color:var(--color-text-secondary); font-size:0.95rem; line-height:1.8; display:flex; flex-direction:column; gap:1rem;">
+        <p>باستخدامك لتطبيق درع، فإنك توافق على الالتزام بالشروط الآتية:</p>
+        <h4 style="color:#FFF;">1. الاستخدام المشروع</h4>
+        <p>يُقدّم تطبيق درع كأداة لحماية الخصوصية الشخصية ومكافحة الإعلانات الضارة. يمنع استخدام التطبيق في أي نشاط يخالف القوانين أو ينتهك سلامة الأنظمة الرقمية.</p>
+
+        <h4 style="color:#FFF;">2. إخلاء المسؤولية</h4>
+        <p>يتم توفير التطبيق "كما هو" وبدون ضمانات صريحة أو ضمنية. نحن نسعى دائماً لتحديث قوائم الحجب لمنحك أفضل تجربة تصفح آمنة.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
