@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كيف يعمل تطبيق درع؟ | Dir3 للهندسة الأمنية والفلترة المحلية</title>
+  
+  <meta name="description" content="تعرف على كيفية عمل تطبيق درع (Dir3) عبر تقنية Local Loopback VPN وفلترة DNS دون إرسال ترافيك هاتفك لأي خوادم خارجية.">
+  <meta name="keywords" content="كيف يعمل درع, آلية عمل مانع الإعلانات, Local VPN أندرويد, DNS Sinkhole, فلترة محلية, أمان أندرويد">
+  <meta name="theme-color" content="#050506">
+
+  <!-- Favicon / App Icon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2">
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png?v=2">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png?v=2">
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Cyber Matrix Grid Background -->
+  <div class="cyber-grid-bg" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="الصفحة الرئيسية لتطبيق درع">
+        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <span>.Dir3</span>
+        <span class="brand-arabic-badge">درع</span>
+      </a>
+
+      <nav aria-label="القائمة الرئيسية">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="features.html" class="nav-link">المميزات</a></li>
+          <li><a href="how-it-works.html" class="nav-link active">كيف يعمل؟</a></li>
+          <li><a href="privacy.html" class="nav-link">الخصوصية والأمان</a></li>
+          <li><a href="faq.html" class="nav-link">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="download.html" class="btn btn-primary btn-sm shimmer-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>تحميل APK</span>
+        </a>
+
+        <button class="mobile-toggle" aria-label="فتح القائمة" aria-expanded="false" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Subpage Hero -->
+    <section class="subpage-hero">
+      <div class="hero-glow-sphere" aria-hidden="true"></div>
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">الرئيسية</a>
+          <span class="separator">/</span>
+          <span>كيف يعمل؟</span>
+        </div>
+        <div class="badge-pill" style="display:inline-flex; margin-bottom:1rem;">
+          <span class="pulse-dot"></span>
+          <span>هندسة أمان متقدمة</span>
+        </div>
+        <h1 class="page-title">
+          كيف يحميك درع<br>
+          <span class="text-neon">محلياً بدون خوادم وسيطة؟</span>
+        </h1>
+        <p class="page-subtitle">
+          اكتشف كيف تحول تقنية Local Loopback VPN هاتفك الأندرويد إلى حصن رقمي يسقط الإعلانات والمتعقبات قبل أن تبدأ بالتحميل، بسرعة فائقة وصفر تسجيل لبياناتك.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3 Steps Section -->
+    <section class="how-section" style="padding-top:1rem;">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">بساطة لا تضاهى</span>
+          <h2 class="section-title">التفعيل في 3 خطوات بسيطة</h2>
+          <p class="section-subtitle">
+            لا يتطلب صلاحيات روت (No Root) ولا يتطلب إعدادات معقدة. الحماية تبدأ بنقرة واحدة خلال أقل من 30 ثانية.
+          </p>
+        </div>
+
+        <div class="steps-timeline">
+          <!-- Step 1 -->
+          <div class="step-card reveal">
+            <div class="step-number-badge">01</div>
+            <h3 class="step-title">تثبيت درع (Install Dir3)</h3>
+            <p class="step-desc">
+              قم بتحميل ملف APK الرسمي والآمن مباشرة من الموقع وتثبيته على هاتفك الأندرويد دون الحاجة لحساب أو اشتراك.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card reveal delay-1">
+            <div class="step-number-badge">02</div>
+            <h3 class="step-title">تفعيل الحماية المحلية (Local VPN)</h3>
+            <p class="step-desc">
+              افتح التطبيق واضغط على المفتاح الرئيسي ليقوم بإنشاء واجهة Loopback داخلية آمنة في معالج الهاتف دون الاتصال بأي خادم خارجي.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card reveal delay-2">
+            <div class="step-number-badge">03</div>
+            <h3 class="step-title">تصفح بفلترة DNS مشفرة</h3>
+            <p class="step-desc">
+              استمتع بتصفح فوري ونظيف، حيث يتم إسقاط جميع طلبات خوادم الإعلانات والمتعقبات محلياً وفورياً قبل خروجها للإنترنت.
+            </p>
+          </div>
+        </div>
+
+        <!-- Architecture Deep Dive Card -->
+        <div class="content-doc-card reveal" style="margin-top: 5rem;">
+          <div class="doc-section">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              ما هو اتصال الـ Loopback المحلي؟
+            </h3>
+            <p>
+              في أنظمة أندرويد، الطريقة الرسمية والآمنة لمراقبة وفلترة حزم الشبكة دون الحاجة لصلاحيات الروت هي استخدام واجهة <strong>Android VpnService</strong>.
+            </p>
+            <p>
+              بينما تستغل تطبيقات الـ VPN التجارية هذه الخدمة لتمرير بيانات تصفحك عبر نفق مشفر إلى خوادمهم في بلدان أخرى (ما قد يعرضك لمخاطر التجسس أو تسجيل بياناتك)، يقوم تطبيق <strong>درع (Dir3)</strong> بإنشاء نفق وهمي محلي يدعى <em>Local Loopback Interface</em> ينتهي داخل معالج هاتفك نفسه (عنوان 127.0.0.1).
+            </p>
+          </div>
+
+          <div class="doc-section">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              كيف تعمل تقنية الـ DNS Sinkhole؟
+            </h3>
+            <p>
+              عندما يطلب أي تطبيق أو صفحة ويب على هاتفك فتح رابط (مثل تحميل إعلان تجاري أو كود تتبع):
+            </p>
+            <ul>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>اعتراض طلب الـ DNS:</strong> يلتقط درع استعلام النطاق في الذاكرة العشوائية للجهاز قبل أن يُرسل لشبكة الإنترنت.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>المطابقة اللحظية مع القواعد:</strong> يقارن النطاق بقاعدة بيانات محلية تضم مئات آلاف نطاقات الإعلانات والمتعقبات وبرمجيات التصيد.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>إسقاط الطلب الخبيث (Sinkhole):</strong> إذا كان النطاق إعلانياً أو احتيالياً، يُرجع درع عنواناً صفرياً (0.0.0.0)، فيتوقف الطلب فوراً دون استهلاك باقة الإنترنت.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>تمرير الطلبات السليمة:</strong> إذا كان الموقع طبيعياً وسليماً، يمر الطلب مباشرة إلى مزود الإنترنت لديك بأقصى سرعة ممكنة وبدون أي تأخير.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="doc-section">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              لماذا لا يحتاج درع إلى صلاحيات روت (No Root)؟
+            </h3>
+            <p>
+              تعديل ملف `hosts` التقليدي في أندرويد لحجب الإعلانات كان يتطلب قديماً ترويت الهاتف، وهو ما يعطل تطبيقات البنوك ويلغي ضمان الجهاز ويعرض الهاتف للاختراق. درع يتجاوز هذه العقبة بالكامل عبر محاكاة الـ VPN المحلي، مما يوفر نفس فاعلية الروت ولكن بأمان مطلق وتوافق كامل مع أنظمة الحماية المصرفية في هاتفك.
+            </p>
+          </div>
+
+          <div class="doc-section">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+              التوافق مع شبكات Wi-Fi وشبكات الهاتف (4G/5G)
+            </h3>
+            <p>
+              يعمل درع باستمرار وسلاسة عند التنقل بين شبكات الواي فاي وشبكات الهاتف المحمولة دون انقطاع الاتصال أو الحاجة لإعادة تشغيل الحماية. كما أنه متوافق مع كافة مزودي الخدمة في مختلف الدول.
+            </p>
+          </div>
+        </div>
+
+        <!-- Subpage CTA Banner -->
+        <div class="subpage-cta-banner reveal">
+          <h2>ابدأ حماية خصوصيتك خلال دقيقة واحدة</h2>
+          <p>احصل على أحدث إصدار من تطبيق درع واستمتع بتجربة أندرويد حقيقية وخالية من الضجيج الإعلاني.</p>
+          <a href="download.html" class="btn btn-primary btn-lg shimmer-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>تحميل ملف APK الآن</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="شعار درع">
+            <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <span>.Dir3</span>
+          </a>
+          <p>
+            درع (Dir3) هو تطبيق أندرويد متقدم لحجب الإعلانات الشامل وحماية الخصوصية الرقمية محلياً. تصفح بلا إعلانات، ولا متعقبين ولا احتيال.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://github.com/dir3-shield/dir3-android" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://t.me/dir3_app" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Telegram Channel">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.196 1.006.128.832.943z"/>
+              </svg>
+            </a>
+            <a href="mailto:support@dir3.app" class="social-btn" aria-label="Contact Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">التنقل السريع</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="features.html">المميزات والخصائص</a></li>
+            <li><a href="how-it-works.html">كيف يعمل؟</a></li>
+            <li><a href="privacy.html">الأمان والخصوصية</a></li>
+            <li><a href="download.html">تحميل ملف APK</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">الوثائق والسياسات</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a href="terms.html">شروط الاستخدام</a></li>
+            <li><a href="download.html#install-guide">دليل التثبيت اليدوي</a></li>
+            <li><a href="https://github.com/dir3-shield/dir3-android" target="_blank" rel="noopener noreferrer">الكود المصدري (GitHub)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">الدعم والأمان</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:support@dir3.app">support@dir3.app</a></li>
+            <li><a href="mailto:security@dir3.app">الإبلاغ عن ثغرة أمنية</a></li>
+            <li><a href="https://t.me/dir3_app" target="_blank" rel="noopener noreferrer">قناة مجتمع تيليجرام</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Dir3 (درع). جميع الحقوق محفوظة. تطبيق مستقل لحماية الخصوصية.
+        </div>
+        <div>
+          تم التطوير بأعلى معايير الأمن السيبراني • الإصدار <span data-config="app-version">v1.4.2</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

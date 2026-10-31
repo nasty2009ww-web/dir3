@@ -91,8 +91,24 @@ function initNavigation() {
     });
   }
 
-  // Active section tracker
+  // Active page detection for multi-page website
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const cleanHref = href.split('#')[0];
+    if (cleanHref === currentPath || (cleanHref === 'index.html' && (currentPath === '' || currentPath === '/'))) {
+      link.classList.add('active');
+    } else if (cleanHref && !href.startsWith('#')) {
+      link.classList.remove('active');
+    }
+  });
+
+  // Active section tracker (when on a single page with hash anchors)
   function updateActiveNav() {
+    const hashLinks = Array.from(navLinks).filter(l => l.getAttribute('href')?.startsWith('#'));
+    if (hashLinks.length === 0) return;
+
     const sections = document.querySelectorAll('section[id]');
     const scrollPos = window.scrollY + 120;
 
@@ -102,7 +118,7 @@ function initNavigation() {
       const id = section.getAttribute('id');
 
       if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
+        hashLinks.forEach(link => {
           link.classList.remove('active');
           if (link.getAttribute('href') === `#${id}`) {
             link.classList.add('active');

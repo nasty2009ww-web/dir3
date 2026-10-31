@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dir3-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dir3</title>
+<style>
+/* ====== صفحة تجريبية (استبدلها بمحتوى موقعك) ====== */
+html,body{margin:0;background:#0b0b0e;color:#eef4da;font-family:"Cairo","Tajawal","Segoe UI",Tahoma,system-ui,sans-serif}
+main{min-height:100svh;display:grid;place-content:center;text-align:center;gap:12px;padding:24px}
+main h1{margin:0;font-size:clamp(2rem,6vw,3.5rem);color:#D1FF42}
+main p{margin:0;opacity:.75}
+
+/* ====== DIR3 LOADER : CSS ====== */
+html.dir3-loading{overflow:hidden}
+#dir3-loader{--lime:#D1FF42;--la:209,255,66;position:fixed;inset:0;z-index:99999;background:#050506;color:var(--lime);display:grid;place-items:center;overflow:hidden;
+  opacity:1;visibility:visible;transition:opacity .8s ease,visibility 0s linear 0s;font-family:"Cairo","Tajawal","Segoe UI",Tahoma,system-ui,sans-serif}
+#dir3-loader.is-done{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .8s ease,visibility 0s linear .8s}
+#dir3-loader::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(rgba(var(--la),.035) 1px,transparent 1px) 0 0/56px 56px,linear-gradient(90deg,rgba(var(--la),.035) 1px,transparent 1px) 0 0/56px 56px;
+  -webkit-mask:radial-gradient(ellipse 60% 55% at 50% 45%,#000,transparent);mask:radial-gradient(ellipse 60% 55% at 50% 45%,#000,transparent)}
+#dir3-loader canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+#dir3-loader .stage{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:clamp(18px,4svh,36px);padding:0 20px}
+#dir3-loader .stage::before{content:"";position:absolute;top:-6%;width:min(88vw,620px);aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--la),.17),transparent);filter:blur(30px);animation:d3-breathe 4s ease-in-out infinite}
+#d3-shield{position:relative;height:min(54svh,460px);aspect-ratio:400/440;width:auto;overflow:visible}
+#d3-shield .halo{animation:d3-breathe 3s ease-in-out infinite}
+#d3-shield .pulse{transform-box:fill-box;transform-origin:center;animation:d3-ring 3.4s ease-out infinite}
+#d3-shield .scan{animation:d3-scan 2.4s linear infinite}
+#d3-shield .spin{transform-box:fill-box;transform-origin:center;animation:d3-rot 18s linear infinite}
+#d3-shield .spin2{animation-duration:11s;animation-direction:reverse}
+#d3-shield .trace{stroke-dasharray:6 10;animation:d3-dash 1.6s linear infinite}
+#d3-flash{opacity:0}
+.d3-arrow .trail,.d3-arrow .scar{transition:opacity .5s}
+.d3-arrow .scar{opacity:0}
+.d3-arrow.hit .trail{opacity:0}.d3-arrow.hit .scar{opacity:.9}
+.d3-arrow.hit .gl{animation:d3-glow 2.4s ease-in-out var(--dl,0s) infinite}
+.is-ready .d3-arrow .gl{opacity:.8;animation:none}
+@keyframes d3-breathe{50%{opacity:.55}}
+@keyframes d3-ring{0%{opacity:.55;transform:scale(1)}100%{opacity:0;transform:scale(1.14)}}
+@keyframes d3-scan{from{transform:translateY(-60px)}to{transform:translateY(470px)}}
+@keyframes d3-rot{to{transform:rotate(360deg)}}
+@keyframes d3-dash{to{stroke-dashoffset:-32}}
+@keyframes d3-glow{50%{opacity:.7}0%,100%{opacity:.22}}
+
+#dir3-loader .meter{width:min(78vw,380px);display:grid;gap:12px}
+#dir3-loader .bar{height:4px;border-radius:4px;overflow:hidden;direction:ltr;background:rgba(var(--la),.14)}
+#dir3-loader .fill{height:100%;border-radius:inherit;background:var(--lime);box-shadow:0 0 14px rgba(var(--la),.85);transform:scaleX(0);transform-origin:left center;will-change:transform}
+#dir3-loader .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+#dir3-loader .label{font-size:clamp(.9rem,2.8vw,1.05rem);font-weight:600;color:rgba(var(--la),.92)}
+#dir3-loader .pct{direction:ltr;min-width:4ch;text-align:left;font-size:clamp(1.1rem,3.4vw,1.4rem);font-weight:700;font-variant-numeric:tabular-nums;text-shadow:0 0 14px rgba(var(--la),.55)}
+@media (max-width:700px){#d3-shield{height:min(36svh,300px)}}
+@media (prefers-reduced-motion:reduce){#dir3-loader *,#dir3-loader *::before{animation:none!important}#dir3-loader canvas{display:none}}
+</style>
+<noscript><style>#dir3-loader{display:none}html.dir3-loading{overflow:auto}</style></noscript>
+  <!-- Favicon / App Icon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2">
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png?v=2">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png?v=2">
+
+</head>
+<body>
+
+<!-- ====== DIR3 LOADER : HTML (ضعه مباشرة بعد <body>) ====== -->
+<div id="dir3-loader" role="progressbar" aria-label="جاري تفعيل درع الحماية" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <div class="stage">
+    <svg id="d3-shield" viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <path id="sh" d="M200 14 L350 66 V218 C350 330 284 400 200 428 C116 400 50 330 50 218 V66 Z"/>
+        <clipPath id="clip"><use href="#sh"/></clipPath>
+        <filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+        <radialGradient id="fillg" cx=".5" cy=".38" r=".75"><stop offset="0" stop-color="#D1FF42" stop-opacity=".17"/><stop offset="1" stop-color="#D1FF42" stop-opacity=".02"/></radialGradient>
+        <linearGradient id="scang" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#D1FF42" stop-opacity="0"/><stop offset=".85" stop-color="#D1FF42" stop-opacity=".3"/><stop offset="1" stop-color="#D1FF42" stop-opacity=".9"/></linearGradient>
+        <pattern id="lines" width="400" height="10" patternUnits="userSpaceOnUse"><rect width="400" height="1" fill="#D1FF42" opacity=".14"/></pattern>
+        <linearGradient id="trail" gradientUnits="userSpaceOnUse" x1="-340" x2="0"><stop offset="0" stop-color="#D1FF42" stop-opacity="0"/><stop offset="1" stop-color="#D1FF42" stop-opacity=".95"/></linearGradient>
+      </defs>
+      <g id="d3-rig">
+        <use href="#sh" class="halo" fill="none" stroke="#D1FF42" stroke-width="16" filter="url(#blur)" opacity=".85"/>
+        <use href="#sh" class="pulse" fill="none" stroke="#D1FF42" stroke-width="2"/>
+        <use href="#sh" fill="url(#fillg)" stroke="#D1FF42" stroke-width="4" stroke-linejoin="round"/>
+        <g transform="translate(200 225) scale(.88) translate(-200 -225)"><use href="#sh" fill="none" stroke="#D1FF42" stroke-width="1.2" opacity=".4" stroke-dasharray="3 7"/></g>
+        <g clip-path="url(#clip)"><rect width="400" height="440" fill="url(#lines)"/><rect class="scan" y="-60" width="400" height="60" fill="url(#scang)"/></g>
+        <g fill="none" stroke="#D1FF42" stroke-linecap="round" opacity=".7"><path class="trace" stroke-width="1.5" d="M78 150 H140 L168 178 M322 150 H260 L232 178 M78 300 H130 L160 270 M322 300 H270 L240 270 M200 66 V118"/></g>
+        <g fill="#D1FF42"><circle cx="78" cy="150" r="4"/><circle cx="322" cy="150" r="4"/><circle cx="78" cy="300" r="4"/><circle cx="322" cy="300" r="4"/><circle cx="200" cy="66" r="4"/></g>
+        <g fill="none" stroke="#D1FF42">
+          <circle class="spin" cx="200" cy="225" r="64" stroke-width="1.5" stroke-dasharray="10 14" opacity=".6"/>
+          <circle class="spin spin2" cx="200" cy="225" r="82" stroke-width="1" stroke-dasharray="3 9" opacity=".45"/>
+          <path d="M182 218 V204 a18 18 0 0 1 36 0 V218" stroke-width="5" stroke-linecap="round"/>
+          <rect x="172" y="218" width="56" height="46" rx="8" stroke-width="5" fill="rgba(209,255,66,.14)"/>
+        </g>
+        <circle cx="200" cy="238" r="6" fill="#D1FF42"/><rect x="197" y="240" width="6" height="14" rx="3" fill="#D1FF42"/>
+        <use id="d3-flash" href="#sh" fill="rgba(209,255,66,.28)" stroke="#F6FFD0" stroke-width="7" stroke-linejoin="round"/>
+        <g id="d3-arrows"></g>
+      </g>
+    </svg>
+    <div class="meter">
+      <div class="bar"><div class="fill"></div></div>
+      <div class="row">
+        <span class="label">جاري تفعيل درع الحماية...</span>
+        <span class="pct" aria-hidden="true">0%</span>
+      </div>
+    </div>
+  </div>
+  <canvas aria-hidden="true"></canvas>
+</div>
+<!-- ====== /DIR3 LOADER : HTML ====== -->
+
+<main>
+  <h1>مرحباً بك في Dir3</h1>
+  <p>تم تفعيل درع الحماية. الموقع جاهز.</p>
+</main>
+
+<!-- ====== DIR3 LOADER : JS (ضعه قبل </body>) ====== -->
+<script>
+(() => {
+'use strict';
+const root = document.getElementById('dir3-loader'); if (!root) return;
+const $ = s => root.querySelector(s), rand = (a, b) => a + Math.random() * (b - a);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const DURATION = reduce ? 1200 : 3400;               // مدة التحميل بالمللي ثانية
+const svg = $('#d3-shield'), rig = $('#d3-rig'), layer = $('#d3-arrows'), flash = $('#d3-flash'), outline = $('#sh');
+const cv = $('canvas'), ctx = cv.getContext('2d'), fill = $('.fill'), pctEl = $('.pct'), label = $('.label');
+let W = 0, H = 0;
+function resize() {
+  const d = Math.min(devicePixelRatio || 1, 2);
+  W = root.clientWidth; H = root.clientHeight; cv.width = W * d; cv.height = H * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+}
+addEventListener('resize', resize); resize();
+
+/* نقاط حافة الدرع (وحدات SVG) كي تستقر الأسهم بدقة على الحدود */
+const CX = 200, CY = 225, edge = [], total = outline.getTotalLength();
+for (let i = 0; i < 360; i++) { const p = outline.getPointAtLength(total * i / 360); edge.push({ x: p.x, y: p.y, a: Math.atan2(p.y - CY, p.x - CX) }); }
+function edgePoint(phi) {
+  let best = edge[0], bd = 9;
+  for (const p of edge) { const d = Math.abs(Math.atan2(Math.sin(p.a - phi), Math.cos(p.a - phi))); if (d < bd) { bd = d; best = p; } }
+  return best;
+}
+
+/* الأسهم */
+const ARROW = `<g class="d3-arrow" fill="#D1FF42" stroke="#D1FF42" stroke-linecap="round" stroke-linejoin="round">
+  <line class="trail" x1="-340" x2="0" stroke="url(#trail)" stroke-width="3"/>
+  <g class="scar" fill="none" stroke-width="1.4"><circle cx="-14" r="11"/><circle cx="-14" r="19" opacity=".4"/><path d="M-14 0l-12-18M-14 0l-16 12M-14 0l10-20M-14 0l8 18"/></g>
+  <line class="gl" x1="-90" x2="-8" stroke-width="9" opacity=".22"/>
+  <line x1="-90" x2="-8" stroke-width="2.6"/>
+  <path d="M0 0L-18 -8L-12 0L-18 8Z" stroke-width="1"/>
+  <path d="M-90 0L-106 -10L-97 0L-106 10ZM-72 0L-84 -8L-77 0L-84 8Z" stroke-width="1"/>
+  <circle r="2.6" fill="#fff" stroke="none"/>
+</g>`;
+const ANGLES = [180, -40, 150, -150, 40, -100, 0, 105];   // اتجاهات الاقتراب (أول سهم من اليسار)
+const flying = []; let n = 0;
+function fire(instant) {
+  const phi = ANGLES[n++] * Math.PI / 180, ux = Math.cos(phi), uy = Math.sin(phi), P = edgePoint(phi);
+  const a = { phi, P, ux, uy, rot: Math.atan2(-uy, -ux) * 180 / Math.PI, t: 0,
+    end: { x: P.x - ux * 14, y: P.y - uy * 14 }, start: { x: P.x + ux * 720, y: P.y + uy * 720 } };
+  layer.insertAdjacentHTML('beforeend', ARROW);
+  a.g = layer.lastElementChild; a.g.style.setProperty('--dl', (n * .3) + 's');
+  place(a, 0); if (instant) land(a, true); else flying.push(a);
+}
+function place(a, e) {
+  const x = a.start.x + (a.end.x - a.start.x) * e, y = a.start.y + (a.end.y - a.start.y) * e;
+  a.g.setAttribute('transform', `translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${a.rot.toFixed(2)})`);
+}
+function land(a, quiet) {
+  place(a, 1); a.g.classList.add('hit'); if (quiet) return;
+  const r = svg.getBoundingClientRect(), s = r.width / 400;
+  burst(r.left + a.P.x * s, r.top + a.P.y * s, s, a.phi);
+  rig.animate([{ transform: `translate(${-a.ux * 5}px,${-a.uy * 5}px)` }, { transform: 'none' }], { duration: 300, easing: 'ease-out' });
+  flash.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 480, easing: 'ease-out' });
+}
+if (reduce) { while (n < ANGLES.length) fire(true); }
+else ANGLES.forEach((_, i) => setTimeout(() => fire(false), 300 + i * 340));
+
+/* مؤثرات الكانفاس: شرر، موجات صدمة، وميض، جسيمات عائمة */
+const rings = [], sparks = [], flashes = [];
+function burst(x, y, s, ang, big) {
+  rings.push({ x, y, s, t: 0, big }); flashes.push({ x, y, s, t: 0, big });
+  for (let i = 0; i < (big ? 44 : 20); i++) {
+    const a = big ? rand(0, 6.283) : ang + rand(-1.3, 1.3), v = rand(90, 380) * s;
+    sparks.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, l: rand(.35, .85), m: .85 });
+  }
+}
+const parts = Array.from({ length: W < 700 ? 22 : 44 }, () => ({ x: rand(0, W), y: rand(0, H), r: rand(.6, 1.7), v: rand(6, 22), a: rand(.15, .5), ph: rand(0, 6.28) }));
+
+/* التقدم + الحلقة الرئيسية */
+let t0 = 0, last = 0, shown = -1, raf = 0, finished = false;
+const ease = t => .5 - Math.cos(Math.PI * t) / 2;
+function loop(now) {
+  if (!t0) t0 = last = now;
+  const dt = Math.min(.05, (now - last) / 1000); last = now;
+  const t = Math.min(1, (now - t0) / DURATION), p = ease(t), pc = Math.round(p * 100);
+  fill.style.transform = `scaleX(${p})`;
+  if (pc !== shown) { shown = pc; pctEl.textContent = pc + '%'; root.setAttribute('aria-valuenow', pc); }
+
+  if (!reduce) {
+    ctx.clearRect(0, 0, W, H); ctx.globalCompositeOperation = 'lighter';
+    for (const q of parts) {
+      q.y -= q.v * dt; q.x += Math.sin(now / 2200 + q.ph) * 5 * dt; if (q.y < -4) { q.y = H + 4; q.x = rand(0, W); }
+      ctx.fillStyle = `rgba(209,255,66,${(q.a * (.6 + .4 * Math.sin(now / 700 + q.ph))).toFixed(3)})`;
+      ctx.beginPath(); ctx.arc(q.x, q.y, q.r, 0, 6.283); ctx.fill();
+    }
+    for (let i = flying.length - 1; i >= 0; i--) {
+      const a = flying[i]; a.t = Math.min(1, a.t + dt / .55); place(a, a.t ** 2.2);
+      if (a.t === 1) { flying.splice(i, 1); land(a); }
+    }
+    for (let i = flashes.length - 1; i >= 0; i--) {
+      const f = flashes[i]; f.t += dt / .28; if (f.t >= 1) { flashes.splice(i, 1); continue; }
+      const R = (f.big ? 160 : 70) * f.s, g = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, R);
+      g.addColorStop(0, `rgba(240,255,190,${(1 - f.t) * .9})`); g.addColorStop(1, 'rgba(209,255,66,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(f.x, f.y, R, 0, 6.283); ctx.fill();
+    }
+    for (let i = rings.length - 1; i >= 0; i--) {
+      const r = rings[i]; r.t += dt / (r.big ? .9 : .6); if (r.t >= 1) { rings.splice(i, 1); continue; }
+      const R = (r.big ? 320 : 120) * r.s;
+      for (const k of [1, .62]) {
+        ctx.strokeStyle = `rgba(209,255,66,${((1 - r.t) ** 1.6 * k).toFixed(3)})`; ctx.lineWidth = 3.2 * (1 - r.t) * k + .6;
+        ctx.beginPath(); ctx.arc(r.x, r.y, Math.pow(r.t, .55) * R * k, 0, 6.283); ctx.stroke();
+      }
+    }
+    ctx.lineCap = 'round'; ctx.lineWidth = 1.8;
+    for (let i = sparks.length - 1; i >= 0; i--) {
+      const q = sparks[i]; q.l -= dt; if (q.l <= 0) { sparks.splice(i, 1); continue; }
+      q.vy += 300 * dt; q.vx *= .985; q.x += q.vx * dt; q.y += q.vy * dt;
+      ctx.strokeStyle = `rgba(209,255,66,${(q.l / q.m).toFixed(3)})`;
+      ctx.beginPath(); ctx.moveTo(q.x, q.y); ctx.lineTo(q.x - q.vx * .035, q.y - q.vy * .035); ctx.stroke();
+    }
+    ctx.globalCompositeOperation = 'source-over';
+  }
+
+  if (t >= 1 && !finished && !flying.length) { finished = true; ready(); }
+  raf = requestAnimationFrame(loop);
+}
+raf = requestAnimationFrame(loop);
+
+/* الاكتمال: وميض كبير للدرع ثم تلاشي الشاشة بالكامل */
+function ready() {
+  root.classList.add('is-ready'); label.textContent = 'تم تفعيل درع الحماية';
+  const r = svg.getBoundingClientRect(), s = r.width / 400;
+  if (!reduce) burst(r.left + r.width / 2, r.top + r.height * .51, s, 0, true);
+  flash.animate([{ opacity: 1 }, { opacity: .35 }, { opacity: 0 }], { duration: 900, easing: 'ease-out' });
+  setTimeout(() => {
+    root.classList.add('is-done'); document.documentElement.classList.remove('dir3-loading');
+    const remove = () => { cancelAnimationFrame(raf); removeEventListener('resize', resize); root.remove(); };
+    root.addEventListener('transitionend', e => { if (e.propertyName === 'opacity') remove(); }, { once: true });
+    setTimeout(remove, 1500);
+  }, reduce ? 200 : 650);
+}
+})();
+</script>
+<!-- ====== /DIR3 LOADER : JS ====== -->
+</body>
+</html>

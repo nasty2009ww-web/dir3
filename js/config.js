@@ -28,7 +28,7 @@ globalScope.DIR3_CONFIG = {
   // قم بتعيين هذا الرابط لملف الـ APK الفعلي الخاص بك (مثلاً رابط GitHub Releases أو خادمك الخاص)
   download: {
     // يمكنك تعديل الرابط التالي إلى الرابط المباشر لملف الـ APK
-    apkUrl: "https://github.com/dir3-shield/dir3-android/releases/download/v1.4.2/Dir3-v1.4.2-release.apk",
+    apkUrl: "https://files.catbox.moe/pb0m6e.apk",
     // مرآة بديلة إن وجدت
     mirrorUrl: "https://releases.dir3.app/latest/Dir3-universal.apk",
     // مصدر الكود
