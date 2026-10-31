@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nasty2009ww-web.github.io/dir3/sitemap.xml
